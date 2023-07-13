@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    tools {
+        maven '3.9.1'
+    }
     parameters {
 
     // the first option is the default value even if you don't chose it.
@@ -14,6 +17,9 @@ pipeline {
                     def test = 2 + 2 > 3 ? 'cool' : 'not cool'
                         echo test
                 }
+                sh "mvn clean install"
+
+//                 sh './gradlew -v'
             }
         }
         stage("test") {
