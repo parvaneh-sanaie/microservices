@@ -2,7 +2,7 @@ pipeline {
     agent any
     parameters {
 
-    // the first option is the default value even if you don't chose it
+    // the first option is the default value even if you don't chose it.
         choice choices: ['one', 'two', 'three'], description: 'pick something', name: 'CHOICE'
     }
     stages {
