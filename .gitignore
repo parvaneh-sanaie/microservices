@@ -3,7 +3,7 @@
 *.jar
 
 # Ignore build output directories
-/target/
+*/target/
 /build/
 
 # Ignore IDE-specific files
